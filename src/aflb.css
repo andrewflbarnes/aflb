@@ -1,0 +1,27 @@
+/* For sticky change main -> body and .footer position to absolute */
+/* For fixed change body -> main and .footer position to fixed */
+html {
+  position: relative;
+  min-height: 100%;
+}
+main {
+  margin-bottom: 3em; /* Margin bottom by footer height */
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 3em;
+  line-height: 3em;
+  width: 100%;
+  /* background-color: #f5f5f5; */
+  background-color: #80f;
+}
+.footer a {
+  color: #fff;
+}
+tr {
+  margin-top: 1em;
+}
+td {
+  text-align: justify;
+}
