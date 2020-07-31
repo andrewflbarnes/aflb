@@ -14,10 +14,17 @@ main {
   line-height: 3em;
   width: 100%;
   /* background-color: #f5f5f5; */
-  background-color: #80f;
+  /* background-color: #80f; */
 }
 .footer a {
   color: #fff;
+}
+.footer a:hover {
+  color: #fff;
+}
+.footer i.fa {
+  color: #fff;
+  font-size: 2em;
 }
 td {
   text-align: justify;
