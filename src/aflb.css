@@ -16,7 +16,10 @@ main {
   /* background-color: #f5f5f5; */
   background-color: #80f;
 }
-.footer a {
+.footer * {
+  color: #fff;
+}
+.footer a:hover {
   color: #fff;
 }
 td {
