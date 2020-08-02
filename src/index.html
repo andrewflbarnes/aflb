@@ -20,7 +20,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 
-  <!-- custom site css -->
+  <!-- custom site resources -->
+  <script src="./aflb.js"></script>
   <link rel="stylesheet" href="./aflb.css">
 </head>
 
@@ -462,6 +463,46 @@
       </div>
     </div>
 
+    <!-- START  CONTACT MODAL -->
+    <div class="text-left modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contact-modal-label">Contact Andrew</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Send an email to <a href="mailto:info@andrewflbarnes.com" title="Email">info@andrewflbarnes.com</a> or fill in the form below.
+          </div>
+          <form id="contact-form">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="contact-name" class="col-form-label">Name/Company:</label>
+                <textarea class="form-control" id="contact-name" name="name" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="contact-message" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="contact-message" name="message" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="contact-contact" class="col-12 px-0 col-form-label">Contact Details:</label>
+                <small>Your email, phone, etc.</small>
+                <textarea class="form-control" id="contact-contact" name="contact" required></textarea>
+              </div>
+            </div>
+            <div class="modal-footer form-group">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button class="btn btn-primary" type="button" onclick="submitContact()">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- FINISH CONTACT MODAL -->
+
     <!-- START  END-OF-PAGE BUFFER -->
     <div class="">&nbsp;</div>
     <!-- FINISH END-OF-PAGE BUFFER -->
@@ -481,16 +522,16 @@
           </a>
         </span>
         <span>
-          <a href="mailto:info@andrewflbarnes.com" title="Contact Andrew">
+          <a href="#" title="Contact Andrew" type="button" data-toggle="modal" data-target="#contact-modal">
             <i class="fas fa-envelope"></i>
             <span class="d-none d-md-inline">
               &nbsp;
-              info@andrewflbarnes.com
+              Contact
             </span>
           </a>
         </span>
         <span>
-          <a href="https://aflbcdn.com/Andrew_Barnes_CV.pdf" title="Download CV" download>
+          <a href="{{CDN_URL}}/Andrew_Barnes_CV.pdf" title="Download CV" download>
             <i class="fas fa-file-pdf"></i>
             <span class="d-none d-md-inline">
               &nbsp;
