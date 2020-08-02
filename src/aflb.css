@@ -14,7 +14,10 @@ main {
   line-height: 3em;
   width: 100%;
 }
-.footer a {
+.footer * {
+  color: #fff;
+}
+.footer a:hover {
   color: #fff;
 }
 .footer a:hover {
