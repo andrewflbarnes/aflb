@@ -17,18 +17,21 @@ function submitContact() {
   }).then(function(res) {
     resOk = res.ok
     resStatus = res.status
-    return res.json()
+    return res.text()
   }).then(function(res) {
     if (!resOk) {
-      throw new Error(`Unable to submit contact (${resStatus}): ${JSON.stringify(res)}`)
+      throw new Error(`Something went wrong :(`)
     }
     $("#contact-modal").modal('toggle')
-    console.log(res)
+    triggerStatusModal("Request submitted", "For anything else please contact Andrew directly at ")
   }).catch(function(error) {
-    // TODO
-    // $('.error-text').text(error)
-    // $('#error-modal').modal('toggle')
+    $("#contact-modal").modal('toggle')
+    triggerStatusModal("Something went wrong :(", "Please contact Andrew directly at ")
     console.error(error)
   })
-
+}
+function triggerStatusModal(label, text) {
+  $('#status-modal-label').text(label)
+  $('#status-modal-text').text(text)
+  $('#status-modal').modal('toggle')
 }
