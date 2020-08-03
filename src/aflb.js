@@ -20,7 +20,7 @@ function submitContact() {
     return res.text()
   }).then(function(res) {
     if (!resOk) {
-      throw new Error(`Something went wrong :(`)
+      throw new Error(`Failed to process contact request: HTTP ${resStatus} - ${res}`)
     }
     $("#contact-modal").modal('toggle')
     triggerStatusModal("Request submitted", "For anything else please contact Andrew directly at ")
