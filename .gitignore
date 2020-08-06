@@ -1,4 +1,1 @@
 static/
-.terraform
-*terraform.tfstate*
-*zip

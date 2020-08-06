@@ -1,0 +1,4 @@
+swagger.yaml
+.terraform
+*terraform.tfstate*
+*zip
