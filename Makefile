@@ -1,4 +1,5 @@
 #!/usr/bin/env make -f
+
 .SILENT:
 .DEFAULT_GOAL = build
 
@@ -11,29 +12,33 @@ SRC_PATH := src
 SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.*)))
 OUT := $(addprefix $(OUT_PATH)/, $(notdir $(SRC)))
 
+define get_time
+$(shell date +"%T")
+endef
+
 .PHONY: clean
 clean:
-	@printf "%-30s - Deleting folder\n" $(OUT_PATH)
+	@printf "$(call get_time) %-30s - Deleting folder\n" $(OUT_PATH)
 	rm -rf $(OUT_PATH)
 
 .PHONY: loop
 loop:
 	@echo "starting build loop"
-	while make build; do sleep 1; done &
+	while make build; do sleep 1; done
 
 .PHONY: build
 build: $(OUT_PATH) $(OUT)
 
 $(OUT_PATH):
-	@printf "%-30s - Creating folder\n" $@
+	@printf "$(call get_time) %-30s - Creating folder\n" $@
 	@mkdir $@
 
 $(OUT_PATH)/%: $(SRC_PATH)/%
-	@printf "%-30s - Copy from %s\n" $@ $<
+	@printf "$(call get_time) %-30s - Copy from %s\n" $@ $<
 	@cp $< $@
 
-	@if [[ "$@" =~ .(js|html)$$ ]]; then \
-	  printf "%-30s - Updating placeholders\n" $@; \
+	@if echo "$@" | grep -E "\.(js|html)$$" > /dev/null; then \
+	  printf "$(call get_time) %-30s - Updating placeholders\n" $@; \
 	  sed \
 	    -i.delete \
 	    -e 's|{{API_URL}}|'$(API_URL)'|g' \
