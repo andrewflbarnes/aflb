@@ -5,15 +5,18 @@
 API_URL ?= "https://api.andrewflbarnes.com"
 CDN_URL ?= "https://aflbcdn.com"
 # modifies "/" characters to prevent sed misinterpretation
-SED_API_URL = $(shell sed 's/\//\\\\\//g' <<< $(API_URL))
-SED_CDN_URL = $(shell sed 's/\//\\\\\//g' <<< $(CDN_URL))
-
+SED_API_URL = $(shell echo $(API_URL) | sed 's/\//\\\\\//g')
+SED_CDN_URL = $(shell echo $(CDN_URL) | sed 's/\//\\\\\//g')
 
 OUT_PATH := static
 SRC_PATH := src
 
 SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.*)))
 OUT := $(addprefix $(OUT_PATH)/, $(notdir $(SRC)))
+
+echo:
+	echo $(SED_API_URL)
+	echo $(SED_CDN_URL)
 
 .PHONY: clean
 clean:
