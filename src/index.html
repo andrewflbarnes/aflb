@@ -25,97 +25,101 @@
   <link rel="stylesheet" href="./aflb.css">
 </head>
 
-<body>
-  <main role="main" class="container text-left justify-content-center">
-    <div class="my-5 text-center">
-      <h1>Andrew Barnes</h1>
+<body data-spy="scroll" data-target="#navbar-main" data-offset="51" style="padding-top: 51px;">
+  <nav id="navbar-main" class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Andrew Barnes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul id="navbarSupportedContent" class="navbar-nav collapse navbar-collapse">
+        <span class="mr-auto">&nbsp;</span>
+        <li class="nav-item">
+          <a class="nav-link" href="#nav-about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nav-skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nav-career">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nav-volunteering">Volunteering</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nav-other">Other</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nav-testimonials">Testimonials</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <nav>
-      <div class="justify-content-center nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
-          aria-controls="nav-about" aria-selected="true">
-          About
-        </a>
-        <a class="nav-item nav-link" id="nav-skills-tab" data-toggle="tab" href="#nav-skills" role="tab"
-          aria-controls="nav-skills" aria-selected="false">
-          Skills
-        </a>
-        <a class="nav-item nav-link" id="nav-career-tab" data-toggle="tab" href="#nav-career" role="tab"
-          aria-controls="nav-career" aria-selected="false">
-          Career
-        </a>
-        <a class="nav-item nav-link" id="nav-volunteering-tab" data-toggle="tab" href="#nav-volunteering" role="tab"
-          aria-controls="nav-volunteering" aria-selected="false">
-          Volunteering
-        </a>
-        <a class="nav-item nav-link" id="nav-other-tab" data-toggle="tab" href="#nav-other" role="tab"
-          aria-controls="nav-other" aria-selected="false">
-          Other
-        </a>
-        <a class="nav-item nav-link" id="nav-testimonials-tab" data-toggle="tab" href="#nav-testimonials" role="tab"
-          aria-controls="nav-testimonials" aria-selected="false">
-          Testimonials
-        </a>
-      </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+  <main role="main" class="text-left justify-content-center">
+
+    <!-- <div class="my-5 text-center">
+      <h1>Andrew Barnes</h1>
+    </div> -->
+
+    <div id="cv-content">
+      <div id="nav-about" class="bg-light-grey pb-3">
+        <div class="p-3">&nbsp;</div>
+        <h2 class="text-center">About</h2>
+        <div class="p-1">&nbsp;</div>
 
         <!-- START  ABOUT -->
-        <div>
-          <!-- <h3 class="mb-1">About</h3> -->
-          <table class="table col-12">
+        <div class="container">
+          <!-- <h2 class="mb-1">About</h2> -->
+          <table class="table table-borderless col-12">
             <tr class="row">
               <th class="col-3">Experience</th>
               <td class="col-9">
-                <p>
-                  A capable and passionate software developer, Andrew has over 8 years of experience building,
-                  designing, integrating and supporting
-                  high-volume, high-availability, fault-tolerant, national scale payments systems both in the UK and
-                  internationally.
-                </p>
-                <p>
-                  Strong communication skills and ability to present technical solutions and challenges to both
-                  technical and non-technical people mean
-                  he frequently runs KT sessions within the organisation and also presents technical demos to senior
-                  level customer staff.
-                </p>
-                <p>
-                  A versatile individual, Andrew possesses a great enthusiasm for learning new (and old!) systems and
-                  technologies, both for his own
-                  enjoyment as well as to better understand the software development landscape, its history and its
-                  future.
-                </p>
+                A capable and passionate software developer, Andrew has over 8 years of experience building,
+                designing, integrating and supporting
+                high-volume, high-availability, fault-tolerant, national scale payments systems both in the UK and
+                internationally.
+                <p></p>
+                Strong communication skills and ability to present technical solutions and challenges to both
+                technical and non-technical people mean
+                he frequently runs KT sessions within the organisation and also presents technical demos to senior
+                level customer staff.
+                <p></p>
+                A versatile individual, Andrew possesses a great enthusiasm for learning new (and old!) systems and
+                technologies, both for his own
+                enjoyment as well as to better understand the software development landscape, its history and its
+                future.
               </td>
             </tr>
             <tr class="row">
               <th class="col-3">Motivations</th>
               <td class="col-9">
-                <p>
-                  Andrew is motivated to deliver high quality, maintainable, clean, robust and vulnerability free code
-                  and platforms which can be readily
-                  supported and continuously improved across a lifespan of many years if not decades.
-                </p>
-                <p>
-                  He prefers to do things correctly rather than quickly and endeavours to understand how and why things
-                  work, not just what works. This drive
-                  and ethos means he measures success not just by the robustness, impact and overall success of
-                  deliveries, but also the ease and ability
-                  with which engineers can maintain, improve, expand, innovate and test them.
-                </p>
+                Andrew is motivated to deliver high quality, maintainable, clean, robust and vulnerability free code
+                and platforms which can be readily
+                supported and continuously improved across a lifespan of many years if not decades.
+                <p></p>
+                He prefers to do things correctly rather than quickly and endeavours to understand how and why things
+                work, not just what works. This drive
+                and ethos means he measures success not just by the robustness, impact and overall success of
+                deliveries, but also the ease and ability
+                with which engineers can maintain, improve, expand, innovate and test them.
               </td>
             </tr>
           </table>
         </div>
         <!-- FINISH ABOUT -->
       </div>
-      <div class="tab-pane fade" id="nav-skills" role="tabpanel" aria-labelledby="nav-skills-tab">
+
+      <div id="nav-skills" class="pb-3">
+        <div class="p-3">&nbsp;</div>
+        <h2 class="text-center">Skills</h2>
+        <div class="p-1">&nbsp;</div>
 
         <!-- START  TECHNICAL SKILLS -->
-        <div>
-          <!-- <h3 class="mb-1">Technical Skills</h3> -->
-          <table class="table col-12">
+        <div class="container">
+          <!-- <h2 class="mb-1">Technical Skills</h2> -->
+          <table class="table table-borderless col-12">
             <tr class="row">
               <th class="col-3">Java</th>
               <td class="col-9">Java 8, Spring, Springboot, Camel, SLF4J + cal10n, JUnit, Mockito, StAX/SAX,
@@ -163,15 +167,19 @@
             </tr>
           </table>
         </div>
+        <p></p>
         <!-- FINISH SPARE TIME SKILLS -->
-
       </div>
-      <div class="tab-pane fade" id="nav-career" role="tabpanel" aria-labelledby="nav-career-tab">
+
+      <div id="nav-career" class="bg-light-grey pb-3">
+        <div class="p-3">&nbsp;</div>
+        <h2 class="text-center">Career</h2>
+        <div class="p-1">&nbsp;</div>
 
         <!-- START  CAREER -->
-        <div>
-          <!-- <h3 class="mb-1">Career</h3> -->
-          <table class="table col-12">
+        <div class="container">
+          <!-- <h2 class="mb-1">Career</h2> -->
+          <table class="table table-borderless col-12">
             <tr class="row">
               <th class="col-3">
                 <strong>Lead Software Development Engineer</strong>
@@ -183,28 +191,25 @@
                 </small>
               </th>
               <td class="col-9">
-                <p>
-                  Responsible for leading a distributed team (US and UK) which designed, integrated and delivered a
-                  general purpose, configuration driven,
-                  messaging and security gateway for payments systems (principally IPS).
-                  Supports over 1000TPS over a single connection with IBM MQ, REST and TCP IP comms as well as ISO8583,
-                  ISO20022 and arbitrary JSON message
-                  formats.
-                  Horizontally scalable and with additional support driven through plugin implementations.
-                </p>
-                <p>
-                  Provide technical leadership and drive best practices within the team around code quality, CI, design.
-                  Coordinate with other engineering leads, BAs and architects to ensure consistency across product and
-                  component integrations.
-                  Coordinate across engineering and other business areas to define and improve wider organisational
-                  practices.
-                </p>
-                <p>
-                  Personally built an ISO8583 over TCP/IP simulator from scratch with full workflow and 3DES (master and
-                  zone keys) support including a UI
-                  for key management and message initiation. This became the defacto TCP/IP 8583 simulator deployed into
-                  internal test environments.
-                </p>
+                Responsible for leading a distributed team (US and UK) which designed, integrated and delivered a
+                general purpose, configuration driven,
+                messaging and security gateway for payments systems (principally IPS).
+                Supports over 1000TPS over a single connection with IBM MQ, REST and TCP IP comms as well as ISO8583,
+                ISO20022 and arbitrary JSON message
+                formats.
+                Horizontally scalable and with additional support driven through plugin implementations.
+                <p></p>
+                Provide technical leadership and drive best practices within the team around code quality, CI, design.
+                Coordinate with other engineering leads, BAs and architects to ensure consistency across product and
+                component integrations.
+                Coordinate across engineering and other business areas to define and improve wider organisational
+                practices.
+                <p></p>
+                Personally built an ISO8583 over TCP/IP simulator from scratch with full workflow and 3DES (master and
+                zone keys) support including a UI
+                for key management and message initiation. This became the defacto TCP/IP 8583 simulator deployed into
+                internal test environments.
+                <p></p>
                 <small>
                   ISO20022, ISO8583,
                   Java 8, Spring, Springboot, Camel, JDBC, StAX,
@@ -227,24 +232,20 @@
                 </small>
               </th>
               <td class="col-9">
-                <p>
-                  Worked on the Immediate Payments System (IPS), a platform for orchestrating ACH payments using
-                  ISO20022 and the IPS gateway for customers.
-                </p>
-                <p>
-                  Delivered key changes around a system re-design to support cross product modularity and horizontal
-                  scaling to drive demanding throughput and SLAs.
-                </p>
-                <p>
-                  Resolved security vulnerabilities and performed an upgrade of all java libraries across the platform
-                  to meet compliance requirements.
-                  Delivered changes to support an HSM upgrade for one of our customers.
-                </p>
-                <p>
-                  Delivered a platform wide tooling update to create docker containers during builds allowing automated
-                  deployments of a full end to end system
-                  on local development environments and into AWS both for internal and customer use.
-                </p>
+                Worked on the Immediate Payments System (IPS), a platform for orchestrating ACH payments using
+                ISO20022 and the IPS gateway for customers.
+                <p></p>
+                Delivered key changes around a system re-design to support cross product modularity and horizontal
+                scaling to drive demanding throughput and SLAs.
+                <p></p>
+                Resolved security vulnerabilities and performed an upgrade of all java libraries across the platform
+                to meet compliance requirements.
+                Delivered changes to support an HSM upgrade for one of our customers.
+                <p></p>
+                Delivered a platform wide tooling update to create docker containers during builds allowing automated
+                deployments of a full end to end system
+                on local development environments and into AWS both for internal and customer use.
+                <p></p>
                 <small>
                   ISO20022,
                   Java 8, Spring, Springboot, JDBC, AspectJ,
@@ -267,16 +268,14 @@
                 </small>
               </th>
               <td class="col-9">
-                <p>
-                  Delivered changes for ATM payments, Mobile Phone Top Ups (MPTU), customer web portal and internal
-                  systems integration.
-                <p>
-                </p>
+                Delivered changes for ATM payments, Mobile Phone Top Ups (MPTU), customer web portal and internal
+                systems integration.
+                <p></p>
                 Main focus was implementing and driving DCC and FCD for ATM customers across UK and Europe, integrations
                 with payments schemes (LINK, Mastercard,
                 etc.) as well as settlement and reconciliation platforms for banks, independent ATM deployers, schemes
                 and Telcos.
-                </p>
+                <p></p>
                 <small>
                   ISO8583,
                   SCOBOL, COBOL, TAL, HP Nonstop/Tandem, Base24, TSS, A98,
@@ -292,13 +291,16 @@
         </div>
         <!-- FINISH CAREER -->
       </div>
-      <div class="tab-pane fade" id="nav-volunteering" role="tabpanel" aria-labelledby="nav-volunteering-tab">
 
+      <div id="nav-volunteering" class="pb-3">
+        <div class="p-3">&nbsp;</div>
+        <h2 class="text-center">Volunteering</h2>
+        <div class="p-1">&nbsp;</div>
 
         <!-- START  VOLUNTEERING -->
-        <div>
-          <!-- <h3>Volunteering</h3> -->
-          <table class="table col-12">
+        <div class="container">
+          <!-- <h2>Volunteering</h2> -->
+          <table class="table table-borderless col-12">
             <tr class="row">
               <th class="col-3">
                 Kings Ski Club
@@ -306,18 +308,15 @@
                 <small>2013 - Present</small>
               </th>
               <td class="col-9">
-                <p>
-                  The UKs largest dryslope Ski and Snowboard racing league
-                </p>
-                <p>
-                  Andrew has enjoyed a long history with Kings Ski Club racing at events while he was at university.
-                  After returning from
-                  his winter season he joined as a volunteeer and between 2014 and 2019 was the lead official for the
-                  Northern League, working
-                  along side the committee to help manage the club over the year and directly responsible for running
-                  all events in the North
-                  of England.
-                </p>
+                The UKs largest dryslope Ski and Snowboard racing league
+                <p></p>
+                Andrew has enjoyed a long history with Kings Ski Club racing at events while he was at university.
+                After returning from
+                his winter season he joined as a volunteeer and between 2014 and 2019 was the lead official for the
+                Northern League, working
+                along side the committee to help manage the club over the year and directly responsible for running
+                all events in the North
+                of England.
               </td>
             </tr>
             <tr class="row">
@@ -327,16 +326,13 @@
                 <small>2017 - Present</small>
               </th>
               <td class="col-9">
-                <p>
-                  Mastercard's bespoke education program for promoting STEM interest in young girls
-                </p>
-                <p>
-                  Andrew has been an active member of Girl4Tech since Vocalink was acquired by Mastercard working in a
-                  variety of locations
-                  to present short interactive discussions to groups of young girls. More recently he has hosted the
-                  stalls for discussions
-                  about cryptology and digital convergence.
-                </p>
+                Mastercard's bespoke education program for promoting STEM interest in young girls
+                <p></p>
+                Andrew has been an active member of Girl4Tech since Vocalink was acquired by Mastercard working in a
+                variety of locations
+                to present short interactive discussions to groups of young girls. More recently he has hosted the
+                stalls for discussions
+                about cryptology and digital convergence.
               </td>
             </tr>
             <tr class="row">
@@ -346,27 +342,28 @@
                 <small>2016</small>
               </th>
               <td class="col-9">
-                <p>
-                  Supporting people living with sight loss and a range of other disabilities to go beyond expectations
-                  across the North of England.
-                </p>
-                <p>
-                  Andrew was fortunate enough to make an onsite visit to Henshaws location in Knaresborough where he
-                  worked as part of a larger team
-                  to help clear the grounds of overgrown shrubbery, weeds and green waste as well as participating in
-                  other general clean up tasks.
-                </p>
+                Supporting people living with sight loss and a range of other disabilities to go beyond expectations
+                across the North of England.
+                <p></p>
+                Andrew was fortunate enough to make an onsite visit to Henshaws location in Knaresborough where he
+                worked as part of a larger team
+                to help clear the grounds of overgrown shrubbery, weeds and green waste as well as participating in
+                other general clean up tasks.
               </td>
             </tr>
           </table>
         </div>
         <!-- FINISH VOLUNTEERING -->
       </div>
-      <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <div id="nav-other" class="bg-light-grey pb-3">
+        <div class="p-3">&nbsp;</div>
+        <h2 class="text-center">Other</h2>
+        <div class="p-1">&nbsp;</div>
+
         <!-- START  MISCELLANEOUS -->
-        <div>
-          <!-- <h3>Miscellaneous</h3> -->
-          <table class="table col-12">
+        <div class="container">
+          <!-- <h2>Miscellaneous</h2> -->
+          <table class="table table-borderless col-12">
             <tr class="row">
               <th class="col-3">GitHub</th>
               <td class="col-9">
@@ -378,16 +375,13 @@
             <tr class="row">
               <th class="col-3">Take Initiative</th>
               <td class="col-9">
-                <p>
-                  Since 2017 Andrew has taken part in the Mastercard Take Initiative, a yearly team hackathon/brainstorm
-                  with the intention of
-                  coming up with new ideas and innovations in the payments industry.
-                </p>
-                <p>
-                  Over the last few years he has explored cardholder driven CPA management (patent submitted to EPO),
-                  loyalty scheme integration in
-                  chip cards and multi-modal biometric ID and payments (patent being drafted).
-                </p>
+                Since 2017 Andrew has taken part in the Mastercard Take Initiative, a yearly team hackathon/brainstorm
+                with the intention of
+                coming up with new ideas and innovations in the payments industry.
+                <p></p>
+                Over the last few years he has explored cardholder driven CPA management (patent submitted to EPO),
+                loyalty scheme integration in
+                chip cards and multi-modal biometric ID and payments (patent being drafted).
               </td>
             </tr>
             <tr class="row">
@@ -426,12 +420,16 @@
         </div>
         <!-- FINISH EDUCATION -->
       </div>
-      <div class="tab-pane fade" id="nav-testimonials" role="tabpanel" aria-labelledby="nav-testimonials-tab">
+
+      <div id="nav-testimonials" class="pb-3">
+        <div class="p-3">&nbsp;</div>
+        <h2 class="text-center">Testimonials</h2>
+        <div class="p-1">&nbsp;</div>
 
         <!-- START  TESTIMONIALS -->
-        <div>
+        <div class="container">
           <!-- <h4>Testimonials</h4> -->
-          <table class="table col-12">
+          <table class="table table-borderless col-12">
             <tr class="row">
               <th class="col-3">
                 Mother Barnes
@@ -464,8 +462,8 @@
     </div>
 
     <!-- START  CONTACT MODAL -->
-    <div class="text-left modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label"
-      aria-hidden="true">
+    <div class="text-left modal fade" id="contact-modal" tabindex="-1" role="dialog"
+      aria-labelledby="contact-modal-label" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -475,7 +473,8 @@
             </button>
           </div>
           <div class="modal-body">
-            Send an email to <a href="mailto:info@andrewflbarnes.com" title="Email">info@andrewflbarnes.com</a> or fill in the form below.
+            Send an email to <a href="mailto:info@andrewflbarnes.com" title="Email">info@andrewflbarnes.com</a> or fill
+            in the form below.
           </div>
           <form id="contact-form">
             <div class="modal-body">
@@ -505,7 +504,7 @@
 
     <!-- START  STATUS MODAL -->
     <div class="text-left modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="status-modal-label"
-    aria-hidden="true">
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -532,9 +531,9 @@
   </main>
 
   <!-- STICKY FOOTER -->
-  <footer class="footer justify-content-center bg-primary">
+  <footer class="footer justify-content-center bg-primary fixed-bottom">
     <div class="container text-center">
-      <span class="text-muted justify-content-around row">
+      <span class="justify-content-around row">
         <span>
           <a href="https://github.com/andrewflbarnes" title="Github Profile">
             <i class="fab fa-github"></i>

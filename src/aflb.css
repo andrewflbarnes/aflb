@@ -6,18 +6,16 @@ html {
 }
 main {
   margin-bottom: 3em; /* Margin bottom by footer height */
+  position: relative;
+}
+body {
+  position: relative;
 }
 .footer {
-  position: fixed;
-  bottom: 0;
   height: 3em;
   line-height: 3em;
-  width: 100%;
 }
 .footer * {
-  color: #fff;
-}
-.footer a:hover {
   color: #fff;
 }
 .footer a:hover {
@@ -29,4 +27,7 @@ main {
 }
 td {
   text-align: justify;
+}
+.bg-light-grey {
+  background-color: #e2e2e2;
 }
