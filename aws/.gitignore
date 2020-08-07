@@ -2,3 +2,4 @@ swagger.yaml
 .terraform
 *terraform.tfstate*
 *zip
+swagger.yml

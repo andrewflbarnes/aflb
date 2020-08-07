@@ -28,7 +28,7 @@ build: $(lambda_source) $(swagger_file)
 
 $(swagger_file):
 	echo Downloading swagger spec $(swagger_spec) to $(swagger_file)
-	curl https://api.swaggerhub.com/apis/andrewflbarnes/andrewflbarnes/1.0.0/swagger.yaml > $@ 2>/dev/null
+	curl https://api.swaggerhub.com/apis/$(swagger_spec)/swagger.yaml > $@ 2>/dev/null
 
 $(lambda_source): index.js
 	echo Building $@
