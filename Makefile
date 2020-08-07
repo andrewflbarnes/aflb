@@ -4,19 +4,12 @@
 
 API_URL ?= "https://api.andrewflbarnes.com"
 CDN_URL ?= "https://aflbcdn.com"
-# modifies "/" characters to prevent sed misinterpretation
-SED_API_URL = $(shell echo $(API_URL) | sed 's/\//\\\\\//g')
-SED_CDN_URL = $(shell echo $(CDN_URL) | sed 's/\//\\\\\//g')
 
 OUT_PATH := static
 SRC_PATH := src
 
 SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.*)))
 OUT := $(addprefix $(OUT_PATH)/, $(notdir $(SRC)))
-
-echo:
-	echo $(SED_API_URL)
-	echo $(SED_CDN_URL)
 
 .PHONY: clean
 clean:
@@ -38,11 +31,13 @@ $(OUT_PATH):
 $(OUT_PATH)/%: $(SRC_PATH)/%
 	@printf "%-30s - Copy from %s\n" $@ $<
 	@cp $< $@
+
 	@if [[ "$@" =~ .(js|html)$$ ]]; then \
 	  printf "%-30s - Updating placeholders\n" $@; \
-	  sed -i.delete ' \
-	    s/{{API_URL}}/'$(SED_API_URL)'/g; \
-	    s/{{CDN_URL}}/'$(SED_CDN_URL)'/g; \
-	  ' $@; \
-	  rm $@.delete; \
+	  sed \
+	    -i.delete \
+	    -e 's|{{API_URL}}|'$(API_URL)'|g' \
+	    -e 's|{{CDN_URL}}|'$(CDN_URL)'|g' \
+	    $@; \
+	    rm $@.delete; \
 	fi
