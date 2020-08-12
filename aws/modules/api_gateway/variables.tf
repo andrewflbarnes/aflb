@@ -18,3 +18,8 @@ variable "contact_lambda_function_name" {
   type        = string
   description = "The name of the lambda function to call on the POST contact API"
 }
+
+variable "stage" {
+  type        = string
+  description = "The name of the stage to deploy the API to"
+}

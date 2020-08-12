@@ -40,6 +40,7 @@ module "api" {
     aws.region = aws.region
   }
 
+  stage                        = var.stage
   contact_lambda_function_name = module.lambda.contact_lambda_function_name
   contact_lambda_invoke_arn    = module.lambda.contact_lambda_invoke_arn
   swagger_spec                 = var.swagger_spec
