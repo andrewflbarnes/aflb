@@ -19,11 +19,6 @@ variable "email_from" {
   description = "The email address notifications should be sent from"
 }
 
-variable "region" {
-  type        = string
-  description = "The region to configure the SES integration with"
-}
-
 variable "iam_role_arn" {
   type        = string
   description = "The arn for the role which the lambda executes under - must have Lambda execution and SES send email"

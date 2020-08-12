@@ -1,30 +1,25 @@
-variable "lambda_name" {
+variable "api_gateway_name" {
   type        = string
-  description = "The name to give the lambda function created"
-  default     = "email_contact_lambda"
+  description = "The name to give the API gateway created"
+  default     = "contact_api_gateway"
 }
 
-variable "lambda_source" {
+variable "swagger_spec" {
   type        = string
-  description = "The name of the zip file containing the source code"
+  description = "The name of the file containing the swagger spec"
 }
 
-variable "email_to" {
+variable "contact_lambda_invoke_arn" {
   type        = string
-  description = "The email address notifications should be sent to"
+  description = "The invoke arn of the lambda function to call on the POST contact API"
 }
 
-variable "email_from" {
+variable "contact_lambda_function_name" {
   type        = string
-  description = "The email address notifications should be sent from"
+  description = "The name of the lambda function to call on the POST contact API"
 }
 
-variable "region" {
+variable "stage" {
   type        = string
-  description = "The region to configure the SES integration with"
-}
-
-variable "iam_role_arn" {
-  type        = string
-  description = "The arn for the role which the lambda executes under - must have Lambda execution and SES send email"
+  description = "The name of the stage to deploy the API to"
 }

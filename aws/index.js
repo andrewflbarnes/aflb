@@ -36,9 +36,9 @@ exports.handler = (event, context, callback) => {
             callback(null, {
                 "statusCode": 202,
                 "headers": {
-                    "Access-Control-Allow-Origin": "*"
-                },
-                "requestId": context.awsRequestId
+                    "Access-Control-Allow-Origin": "*",
+                    "x-invocation-id": context.awsRequestId
+                }
             })
         }
     });
