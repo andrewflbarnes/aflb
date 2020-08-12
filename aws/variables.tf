@@ -18,3 +18,9 @@ variable "lambda_source" {
   description = "The location of the zip file containing the lambda source"
   default     = "contact_lambda.zip"
 }
+
+variable "swagger_spec" {
+  type        = string
+  description = "The location of the file containing the swagger yaml source"
+  default     = "swagger.yml"
+}
