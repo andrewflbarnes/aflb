@@ -38,4 +38,16 @@ The contact functionality on the webpage is backed by some services running in A
 - API gateway - hosts the actual API (https://app.swaggerhub.com/apis/andrewflbarnes/andrewflbarnes/1.0.0
 - Lambda - a serverless function which integrates with SES to deliver the email
 
-(WIP) Some of these services are managed through terraform which can be found in the aws folder
+(WIP) Some of these services are managed through terraform which can be found in the aws folder.
+
+To generate the required resources
+```bash
+cd aws
+
+# download swagger spec and package lambda files
+make build
+
+terraform apply -var-file aflb.tfvars
+```
+
+The final output (which can also be retrieved with `terraform output`) contains the DNS records and certificate ARN for the custom domain.

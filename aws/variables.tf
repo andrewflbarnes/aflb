@@ -29,3 +29,8 @@ variable "swagger_spec" {
   description = "The location of the file containing the swagger yaml source"
   default     = "swagger.yml"
 }
+
+variable "domain" {
+  type        = string
+  description = "The domain to expose the API gateway on"
+}

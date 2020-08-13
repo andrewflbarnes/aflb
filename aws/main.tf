@@ -45,3 +45,10 @@ module "api" {
   contact_lambda_invoke_arn    = module.lambda.contact_lambda_invoke_arn
   swagger_spec                 = var.swagger_spec
 }
+
+module "cert" {
+  source = "./modules/acm"
+
+  #  No provider as the cert must be created in us-east-1
+  domain = var.domain
+}
