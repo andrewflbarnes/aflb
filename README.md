@@ -1,5 +1,7 @@
 # andrewflbarnes
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/846fd94a-78ee-43c3-ba8a-426e9e0933fd/deploy-status)](https://app.netlify.com/sites/eloquent-bell-bf232f/deploys)
+
 A minimal static website designed to host my CV and contact me.
 
 Footer contains links to common services (GH, contact me, CV, etc.)
