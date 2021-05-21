@@ -11,64 +11,44 @@
   <script src="https://kit.fontawesome.com/15d1ceb56e.js" crossorigin="anonymous"></script>
 
   <!-- bootstrap 4.4 -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
   <!-- custom site resources -->
-  <script src="./aflb.js"></script>
-  <link rel="stylesheet" href="./aflb.css">
+  <script src="./aflb2.js"></script>
+  <link rel="stylesheet" href="./aflb2.css">
 </head>
 
 <body>
-  <main role="main" class="container text-left justify-content-center">
-    <div class="my-5 text-center">
-      <h1>Andrew Barnes</h1>
-    </div>
-
-    <nav>
-      <div class="justify-content-center nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
-          aria-controls="nav-about" aria-selected="true">
-          About
-        </a>
-        <a class="nav-item nav-link" id="nav-skills-tab" data-toggle="tab" href="#nav-skills" role="tab"
-          aria-controls="nav-skills" aria-selected="false">
-          Skills
-        </a>
-        <a class="nav-item nav-link" id="nav-career-tab" data-toggle="tab" href="#nav-career" role="tab"
-          aria-controls="nav-career" aria-selected="false">
-          Career
-        </a>
-        <a class="nav-item nav-link" id="nav-volunteering-tab" data-toggle="tab" href="#nav-volunteering" role="tab"
-          aria-controls="nav-volunteering" aria-selected="false">
-          Volunteering
-        </a>
-        <a class="nav-item nav-link" id="nav-other-tab" data-toggle="tab" href="#nav-other" role="tab"
-          aria-controls="nav-other" aria-selected="false">
-          Other
-        </a>
-        <a class="nav-item nav-link" id="nav-testimonials-tab" data-toggle="tab" href="#nav-testimonials" role="tab"
-          aria-controls="nav-testimonials" aria-selected="false">
-          Testimonials
-        </a>
+  <div id="theme">
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#employment">Employment</a></li>
+            <li><a href="#personal">Personal</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-
-        <!-- START  ABOUT -->
-        <div>
-          <!-- <h3 class="mb-1">About</h3> -->
-          <table class="table col-12">
-            <tr class="row">
-              <th class="col-3">Experience</th>
-              <td class="col-9">
+    </header>
+    <main>
+      <section>
+        <div id="about" class="card">
+          <h3 class="card-title">About</h3>
+          <div class="card-content">
+            <!-- START  ABOUT -->
+            <div class="card-content-segment">
+              <div>Experience</div>
+              <div>
                 <p>
                   A capable and passionate software developer, Andrew has over 8 years of experience building,
                   designing, integrating and supporting
@@ -89,11 +69,11 @@
                   enjoyment as well as to better understand the software development landscape, its history and its
                   future.
                 </p>
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Motivations</th>
-              <td class="col-9">
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Motivations</div>
+              <div>
                 <p>
                   Andrew is motivated to deliver high quality, maintainable, clean, robust and vulnerability free code
                   and platforms which can be readily
@@ -111,82 +91,94 @@
                   its ability to allow organisations to rapidly prototype, deliver and scale cost effectively to meet
                   the shifting and expanding demands of todays increasingly digital society and businesses.
                 </p>
-              </td>
-            </tr>
-          </table>
+              </div>
+            </div>
+            <!-- FINISH ABOUT -->
+          </div>
         </div>
-        <!-- FINISH ABOUT -->
-      </div>
-      <div class="tab-pane fade" id="nav-skills" role="tabpanel" aria-labelledby="nav-skills-tab">
-
-        <!-- START  TECHNICAL SKILLS -->
-        <div>
-          <!-- <h3 class="mb-1">Technical Skills</h3> -->
-          <table class="table col-12">
-            <tr class="row">
-              <th class="col-3">Java</th>
-              <td class="col-9">Java (8, 11), Spring, Springboot, Camel, Guice, Spark, SLF4J + cal10n, JUnit, Mockito,
-                StAX/SAX, GRPC, multi-threading & concurrency</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">AWS</th>
-              <td class="col-9">Lambda, S3, Aurora, Step Functions, SNS, SQS, VPC, IAM, EMR, CloudWatch, CLI
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Other languages, scripting</th>
-              <td class="col-9">Regex, Oracle SQL, PL/SQL, PostgreSQL JS, Typescript, HTML, CSS, React, Redux, bash/sh,
-                awk, sed, make, VBA</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Tooling</th>
-              <td class="col-9">IntelliJ, VSCodem Maven, Gradle, Git, Jenkins, GitHub, Gitlab, Gitlab CI, Bitbucket,
-                Nexus,
-                Artifactory, Sonar, Blackduck, Docker, VSCode, Postman</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Linux Tools</th>
-              <td class="col-9">Vim, tcpdump, nc/netcat, curl, grep, jq, miller, find</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Middleware, app. servers</th>
-              <td class="col-9">Tomcat 8, IBM WAS, IBM MQ, RabbitMQ, JMS</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Security</th>
-              <td class="col-9">XML Signing, 3DES, AKDS, PKI, Payshield HSM, Luna HSM, HP Fortify, Threat Modelling,
-                PCI-DSS</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Protocols and standards</th>
-              <td class="col-9">GRPC, HTTP, REST, TCP/IP, ISO8583, ISO20022</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Other experience</th>
-              <td class="col-9">SCOBOL, COBOL, TAL, TACL, HP Nonstop/Tandem, Nonstop Java, Base24, XPNET, TSS</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Programming (personal)</th>
-              <td class="col-9">NodeJS, Vue, Golang, Python, C, jQuery, Android (Java SDK, React Native), Bootstrap</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Tooling (personal)</th>
-              <td class="col-9">Kubernetes/Minikube, Docker Swarm, Coveralls, CirleCI, Heroku, Netlify, Keycloak, Nginx,
-                Squidman, HAProxy</td>
-            </tr>
-          </table>
+        <div id="experience" class="card">
+          <h3 class="card-title">Skills</h3>
+          <div class="card-content">
+            <!-- START  Skills -->
+            <div class="card-content-segment">
+              <div>Java</div>
+              <div>
+                <p>Java (8, 11), Spring, Springboot, Camel, Guice, Spark, SLF4J + cal10n, JUnit, Mockito,
+                  StAX/SAX, GRPC, multi-threading & concurrency</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>AWS</div>
+              <div>
+                <p>Lambda, S3, Aurora, Step Functions, SNS, SQS, VPC, IAM, EMR, CloudWatch, CLI</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Other languages, scripting</div>
+              <div>
+                <p>Regex, Oracle SQL, PL/SQL, PostgreSQL JS, Typescript, HTML, CSS, React, Redux, bash/sh,
+                  awk, sed, make, VBA</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Tooling</div>
+              <div>
+                <p>IntelliJ, VSCode, Maven, Gradle, Git, Jenkins, GitHub, Gitlab, Gitlab CI, Bitbucket,
+                  Nexus,
+                  Artifactory, Sonar, Blackduck, Docker, VSCode, Postman</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Linux Tools</div>
+              <div>
+                <p>Vim, tcpdump, nc/netcat, curl, grep, jq, miller, find</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Middleware, app. servers</div>
+              <div>
+                <p>Tomcat 8, IBM WAS, IBM MQ, RabbitMQ, JMS</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Security</div>
+              <div>
+                <p>XML Signing, 3DES, AKDS, PKI, Payshield HSM, Luna HSM, HP Fortify, Threat Modelling,
+                  PCI-DSS</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Protocols and standards</div>
+              <div>
+                <p>GRPC, HTTP, REST, TCP/IP, ISO8583, ISO20022</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Other experience</div>
+              <div>
+                <p>SCOBOL, COBOL, TAL, TACL, HP Nonstop/Tandem, Nonstop Java, Base24, XPNET, TSS</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Programming (personal)</div>
+              <div>
+                <p>NodeJS, Vue, Golang, Python, C, jQuery, Android (Java SDK, React Native), Bootstrap</p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Tooling (personal)</div>
+              <div>
+                <p>Kubernetes/Minikube, Docker Swarm, Coveralls, CirleCI, Heroku, Netlify, Keycloak, Nginx,
+                  Squidman, HAProxy</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- FINISH SPARE TIME SKILLS -->
-
-      </div>
-      <div class="tab-pane fade" id="nav-career" role="tabpanel" aria-labelledby="nav-career-tab">
-
-        <!-- START  CAREER -->
-        <div>
-          <!-- <h3 class="mb-1">Career</h3> -->
-          <table class="table col-12">
-            <tr class="row">
-              <th class="col-3">
+        <div id="employment" class="card">
+          <h3 class="card-title">Employment</h3>
+          <div class="card-content">
+            <div class="card-content-segment">
+              <div>
                 <strong>Senior Software Development Engineer</strong>
                 <br />
                 <small>
@@ -194,8 +186,8 @@
                   <br />
                   Jan 2021 - Present
                 </small>
-              </th>
-              <td class="col-9">
+              </div>
+              <div>
                 <p>
                   Delivered key components facilitating a signficant platform migration to AWS with a focus on enhancing
                   the
@@ -207,26 +199,26 @@
                   our ecosystem.
                 </p>
                 <p>
-                  Worked in a 4-person pod to rapidly prototype, build and deploy a new customer facing service from
-                  scratch in
-                  4 weeks.
+                  Rapidly prototyped, build and deploy a new customer facing service from scratch in 4 weeks.
                 </p>
                 <p>
                   Currently studying for AWS Solution Architect - Associate certification.
                 </p>
-                <small>
-                  Securities, book of records,
-                  Java 8/11, Spring, Springboot, Guice, Spark, JDBC, Gradle, GRPC/protobufs,
-                  SQL, shell scripting,
-                  AWS (CLI, Lambda, EMR, S3, VPC, Step Functions, CloudWatch, Aurora)
-                  Vault,
-                  Git, GitLab, GitLab CI, Atlassian, Sonar, HP Fortify,
-                  Typescript, React, Redux, Jsonforms, AG-Grid
-                </small>
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
+                <p>
+                  <small>
+                    Securities, book of records,
+                    Java 8/11, Spring, Springboot, Guice, Spark, JDBC, Gradle, GRPC/protobufs,
+                    SQL, shell scripting,
+                    AWS (CLI, Lambda, EMR, S3, VPC, Step Functions, CloudWatch, Aurora)
+                    Vault,
+                    Git, GitLab, GitLab CI, Atlassian, Sonar, HP Fortify,
+                    Typescript, React, Redux, Jsonforms, AG-Grid
+                  </small>
+                </p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>
                 <strong>Lead Software Development Engineer</strong>
                 <br />
                 <small>
@@ -234,8 +226,8 @@
                   <br />
                   Mar 2017 - Dec 2020
                 </small>
-              </th>
-              <td class="col-9">
+              </div>
+              <div>
                 <p>
                   Responsible for leading a distributed team (US and UK) which designed, integrated and delivered a
                   general purpose, configuration driven, messaging and security gateway for payments systems
@@ -258,19 +250,21 @@
                   and 3DES (master and zone keys) support including a UI for key management and message initiation.
                   Used as the de facto TCP/IP 8583 simulator deployed into internal dev/test environments.
                 </p>
-                <small>
-                  ISO20022, ISO8583,
-                  Java 8, Spring, Springboot, Camel, JDBC, StAX,
-                  SQL, shell scripting,
-                  Tomcat, IBM WAS, IBM MQ, RabbitMQ,
-                  Thales HSMs, PKI, 3DES,
-                  Git, GitHub, Atlassian, Jenkins, Sonar, Blackduck, HP Fortify,
-                  Bootstrap, JQuery
-                </small>
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
+                <p>
+                  <small>
+                    ISO20022, ISO8583,
+                    Java 8, Spring, Springboot, Camel, JDBC, StAX,
+                    SQL, shell scripting,
+                    Tomcat, IBM WAS, IBM MQ, RabbitMQ,
+                    Thales HSMs, PKI, 3DES,
+                    Git, GitHub, Atlassian, Jenkins, Sonar, Blackduck, HP Fortify,
+                    Bootstrap, JQuery
+                  </small>
+                </p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>
                 <strong>Senior Software Development Engineer</strong>
                 <br />
                 <small>
@@ -278,8 +272,8 @@
                   <br />
                   Mar 2017 - Dec 2018
                 </small>
-              </th>
-              <td class="col-9">
+              </div>
+              <div>
                 <p>
                   Worked on the Immediate Payments System (IPS), a platform for orchestrating ACH payments using
                   ISO20022 and the IPS gateway for customers.
@@ -298,19 +292,21 @@
                   deployments of a full end to end system
                   on local development environments and into AWS both for internal and customer use.
                 </p>
-                <small>
-                  ISO20022,
-                  Java 8, Spring, Springboot, JDBC, AspectJ,
-                  SQL, batch and shell scripting,
-                  React, Redux, SAX,
-                  IBM WAS, IBM MQ, RabbitMQ,
-                  Luna HSMs, PKI,
-                  Git, GitHub, Atlassian, Jenkins, Sonar, HP Fortify
-                </small>
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
+                <p>
+                  <small>
+                    ISO20022,
+                    Java 8, Spring, Springboot, JDBC, AspectJ,
+                    SQL, batch and shell scripting,
+                    React, Redux, SAX,
+                    IBM WAS, IBM MQ, RabbitMQ,
+                    Luna HSMs, PKI,
+                    Git, GitHub, Atlassian, Jenkins, Sonar, HP Fortify
+                  </small>
+                </p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>
                 <strong>Developer</strong>
                 <br />
                 <small>
@@ -318,119 +314,49 @@
                   <br />
                   Aug 2012 - Feb 2017
                 </small>
-              </th>
-              <td class="col-9">
+              </div>
+              <div>
                 <p>
                   Delivered changes for ATM payments, Mobile Phone Top Ups (MPTU), customer web portal and internal
                   systems integration.
-                <p>
                 </p>
+                <p>
                 Main focus was implementing and driving DCC and FCD for ATM customers across UK and Europe, integrations
                 with payments schemes (LINK, Mastercard,
                 etc.) as well as settlement and reconciliation platforms for banks, independent ATM deployers, schemes
                 and Telcos.
                 </p>
-                <small>
-                  ISO8583,
-                  SCOBOL, COBOL, TAL, HP Nonstop/Tandem, Base24, TSS, A98,
-                  Thales HSMs, 3DES,
-                  Java 5/6, Spring, JSP, Struts, Hibernate,
-                  SQL, PL/SQL, VBA, batch and shell scripting,
-                  WebLogic,
-                  Subversion, Atlassian
-                </small>
-              </td>
+                <p>
+                  <small>
+                    ISO8583,
+                    SCOBOL, COBOL, TAL, HP Nonstop/Tandem, Base24, TSS, A98,
+                    Thales HSMs, 3DES,
+                    Java 5/6, Spring, JSP, Struts, Hibernate,
+                    SQL, PL/SQL, VBA, batch and shell scripting,
+                    WebLogic,
+                    Subversion, Atlassian
+                  </small>
+                </p>
+              </div>
             </tr>
-          </table>
+          </div>
         </div>
-        <!-- FINISH CAREER -->
-      </div>
-      <div class="tab-pane fade" id="nav-volunteering" role="tabpanel" aria-labelledby="nav-volunteering-tab">
-
-
-        <!-- START  VOLUNTEERING -->
-        <div>
-          <!-- <h3>Volunteering</h3> -->
-          <table class="table col-12">
-            <tr class="row">
-              <th class="col-3">
-                Kings Ski Club
-                <br />
-                <small>2013 - Present</small>
-              </th>
-              <td class="col-9">
+        <div id="personal" class="card">
+          <h3 class="card-title">Personal</h3>
+          <div class="card-content">
+            <div class="card-content-segment">
+              <div>GitHub</div>
+              <div>
                 <p>
-                  The UKs largest dryslope Ski and Snowboard racing league
+                  Andrew has a <a href="https://github.com/andrewflbarnes">GitHub</a> account if you fancy checking out
+                  what he tinkers with in his
+                  spare time. This includes work in Java, C, Android Java, React Native, React and Arduino.
                 </p>
-                <p>
-                  Andrew has enjoyed a long history with Kings Ski Club racing at events while he was at university.
-                  After returning from
-                  his winter season he joined as a volunteeer and between 2014 and 2019 was the lead official for the
-                  Northern League, working
-                  along side the committee to help manage the club over the year and directly responsible for running
-                  all events in the North
-                  of England.
-                </p>
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
-                Girls4Tech
-                <br />
-                <small>2017 - Present</small>
-              </th>
-              <td class="col-9">
-                <p>
-                  Mastercard's bespoke education program for promoting STEM interest in young girls
-                </p>
-                <p>
-                  Andrew has been an active member of Girl4Tech since Vocalink was acquired by Mastercard working in a
-                  variety of locations
-                  to present short interactive discussions to groups of young girls. More recently he has hosted the
-                  stalls for discussions
-                  about cryptology and digital convergence.
-                </p>
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
-                Henshaws
-                <br />
-                <small>2016</small>
-              </th>
-              <td class="col-9">
-                <p>
-                  Supporting people living with sight loss and a range of other disabilities to go beyond expectations
-                  across the North of England.
-                </p>
-                <p>
-                  Andrew was fortunate enough to make an onsite visit to Henshaws location in Knaresborough where he
-                  worked as part of a larger team
-                  to help clear the grounds of overgrown shrubbery, weeds and green waste as well as participating in
-                  other general clean up tasks.
-                </p>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <!-- FINISH VOLUNTEERING -->
-      </div>
-      <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-contact-tab">
-        <!-- START  MISCELLANEOUS -->
-        <div>
-          <!-- <h3>Miscellaneous</h3> -->
-          <table class="table col-12">
-            <tr class="row">
-              <th class="col-3">GitHub</th>
-              <td class="col-9">
-                Andrew has a <a href="https://github.com/andrewflbarnes">GitHub</a> account if you fancy checking out
-                what he tinkers with in his
-                spare time. This includes work in Java, C, Android Java, React Native, React and Arduino.
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Take Initiative</th>
-              <td class="col-9">
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Take Initiative</div>
+              <div>
                 <p>
                   Since 2017 Andrew has taken part in the Mastercard Take Initiative, a yearly team hackathon/brainstorm
                   with the intention of
@@ -441,184 +367,114 @@
                   loyalty scheme integration in
                   chip cards and multi-modal biometric ID and payments (patent being drafted).
                 </p>
-              </td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Hobbies</th>
-              <td class="col-9">Snowboarding, wakeboarding, bouldering, running (slowly!), arduino, CTFs (PHP, Python,
-                assembly)</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Accolades</th>
-              <td class="col-9">GitHub followers: 1, found a bug in curl</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">Team</th>
-              <td class="col-9">vim, Jacob, Annie</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Hobbies</div>
+              <div>
+                <p>
+                  Snowboarding, wakeboarding, bouldering, running (slowly!), arduino, CTFs (PHP, Python,
+                  assembly)
+                </p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Accolades</div>
+              <div>
+                <p>
+                  GitHub followers: 1, found a bug in curl
+                </p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>Team</div>
+              <div>
+                <p>
+                  vim, Jacob, Annie
+                </p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>
                 University of Bath
                 <br />
                 <small>2008 - 2011</small>
-              </th>
-              <td class="col-9">BSc Hons Mathematics</td>
-            </tr>
-            <tr class="row">
-            <tr class="row">
-              <th class="col-3">
+              </div>
+              <div>
+                <p>
+                  BSc Hons Mathematics
+                </p>
+              </div>
+            </div>
+            <div class="card-content-segment">
+              <div>
                 Godalming College
                 <br />
                 <small>2005 - 2007</small>
-              </th>
-              <td class="col-9">
-                Maths, Further Maths, Chemistry, Geography, Biology
-              </td>
-            </tr>
-          </table>
-        </div>
-        <!-- FINISH EDUCATION -->
-      </div>
-      <div class="tab-pane fade" id="nav-testimonials" role="tabpanel" aria-labelledby="nav-testimonials-tab">
-
-        <!-- START  TESTIMONIALS -->
-        <div>
-          <!-- <h4>Testimonials</h4> -->
-          <table class="table col-12">
-            <tr class="row">
-              <th class="col-3">
-                Mother Barnes
-                <br />
-                <small>July 2020</small>
-              </th>
-              <td class="col-9">"You're such a clever boy!"</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
-                Developer friend
-                <br />
-                <small>July 2020</small>
-              </th>
-              <td class="col-9">"What the Jesus #$%! is this handwriting?!"</td>
-            </tr>
-            <tr class="row">
-              <th class="col-3">
-                Skier friend
-                <br />
-                <small>March 2017</small>
-              </th>
-              <td class="col-9">"I think you just broke my leg..."</td>
-            </tr>
-          </table>
-        </div>
-        <!-- FINISH TESTIMONIALS -->
-
-      </div>
-    </div>
-
-    <!-- START  CONTACT MODAL -->
-    <div class="text-left modal fade" id="contact-modal" tabindex="-1" role="dialog"
-      aria-labelledby="contact-modal-label" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="contact-modal-label">Contact Andrew</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Send an email to <a href="mailto:info@andrewflbarnes.com" title="Email">info@andrewflbarnes.com</a> or fill
-            in the form below.
-          </div>
-          <form id="contact-form">
-            <div class="modal-body">
-              <div class="form-group">
-                <label for="contact-name" class="col-form-label">Name/Company:</label>
-                <textarea class="form-control" id="contact-name" name="name" required></textarea>
               </div>
-              <div class="form-group">
-                <label for="contact-message" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="contact-message" name="message" required></textarea>
-              </div>
-              <div class="form-group">
-                <label for="contact-contact" class="col-12 px-0 col-form-label">Contact Details:</label>
-                <small>Your email, phone, etc.</small>
-                <textarea class="form-control" id="contact-contact" name="contact" required></textarea>
+              <div>
+                <p>
+                  Maths, Further Maths, Chemistry, Geography, Biology
+                </p>
               </div>
             </div>
-            <div class="modal-footer form-group">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button class="btn btn-primary" type="button" onclick="submitContact()">Submit</button>
+          </div>
+        </div>
+        <div id="contact" class="card">
+          <h3 class="card-title">Contact</h3>
+          <div class="card-content">
+            <div class="contact-info">
+              <div>
+                <h1>
+                  Send an email to <a href="mailto:info@andrewflbarnes.com" title="Email">info@andrewflbarnes.com</a>
+                </h1>
+              </div>
             </div>
-          </form>
+            <!-- <div class="form">
+              <div>
+                Send an email to <a href="mailto:info@andrewflbarnes.com" title="Email">info@andrewflbarnes.com</a> or fill
+                in the form below.
+              </div>
+              <form id="contact-form">
+                <div class="form-fields">
+                  <div class="form-group">
+                    <label for="contact-name" class="form-label">Name/Company:</label>
+                    <textarea class="form-input" id="contact-name" name="name" rows="1" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-contact" class="form-label">Contact Details:</label>
+                    <small>Your email, phone, etc.</small>
+                    <textarea class="form-input" id="contact-contact" name="contact" rows="1" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-message" class="form-label">Message:</label>
+                    <textarea class="form-input-large" id="contact-message" name="message" required></textarea>
+                  </div>
+                </div>
+                <div class="form-buttons">
+                  <button class="button" type="button" onclick="submitContact()">Submit</button>
+                </div>
+              </form>
+            </div> -->
+          </div>
         </div>
+      </section>
+      <div id="theme-switch"><i class="fas fa-moon"></i></div>
+    </main>
+    <footer>
+      <div class="container">
+        <ul>
+          <li><a target="_blank" href="{{CDN_URL}}/Andrew_Barnes_CV.pdf"><i class="fas fa-file-pdf"></i>&nbsp;Download CV</a></li>
+          <!-- <li><a target="_blank" href="#"><i class="fas fa-envelope"></i>&nbsp;Contact</a></li> -->
+          <li>
+            <a title="LinkedIn" href="https://www.linkedin.com/in/andrewflbarnes/"><i class="fab fa-linkedin"></i></a>
+            &nbsp;
+            <a target="_blank" title="GitHub" href="https://github.com/andrewflbarnes"><i class="fab fa-github"></i></a>
+            &nbsp;
+            <a target="_blank" title="CodePen" href="https://codepen.io/andrewflbarnes"><i class="fab fa-codepen"></i></a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <!-- FINISH CONTACT MODAL -->
-
-    <!-- START  STATUS MODAL -->
-    <div class="text-left modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="status-modal-label"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="status-modal-label"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <span id="status-modal-text"></span>
-            <a href="mailto:info@andrewflbarnes.com" title="Email">info@andrewflbarnes.com</a>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- FINISH STATUS MODAL -->
-
-    <!-- START  END-OF-PAGE BUFFER -->
-    <div class="">&nbsp;</div>
-    <!-- FINISH END-OF-PAGE BUFFER -->
-  </main>
-
-  <!-- STICKY FOOTER -->
-  <footer class="footer justify-content-center bg-primary">
-    <div class="container text-center">
-      <span class="text-muted justify-content-around row">
-        <span>
-          <a href="https://github.com/andrewflbarnes" title="Github Profile">
-            <i class="fab fa-github"></i>
-            <span class="d-none d-md-inline">
-              &nbsp;
-              andrewflbarnes
-            </span>
-          </a>
-        </span>
-        <span>
-          <a href="#" title="Contact Andrew" data-toggle="modal" data-target="#contact-modal">
-            <i class="fas fa-envelope"></i>
-            <span class="d-none d-md-inline">
-              &nbsp;
-              Contact
-            </span>
-          </a>
-        </span>
-        <span>
-          <a href="{{CDN_URL}}/Andrew_Barnes_CV.pdf" title="Download CV" download>
-            <i class="fas fa-file-pdf"></i>
-            <span class="d-none d-md-inline">
-              &nbsp;
-              Download CV
-            </span>
-          </a>
-        </span>
-      </span>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
-
-</html>

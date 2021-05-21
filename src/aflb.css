@@ -1,32 +1,347 @@
-/* For sticky change main -> body and .footer position to absolute */
-/* For fixed change body -> main and .footer position to fixed */
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+  font-family: Helvetica;
+  --clr-hue: 190;
+  --clr-nav: white;
+  --clr-content: black;
+  --clr-title: white;
+  --clr-pri: hsl(var(--clr-hue), 90%, 40%);
+  --clr-pri-dark: hsl(var(--clr-hue), 90%, 15%);
+  --clr-sec: hsl(var(--clr-hue), 90%, 30%);
+  --clr-ter: hsl(var(--clr-hue), 70%, 30%);
+  --clr-bg: hsl(var(--clr-hue), 10%, 95%);
+  --clr-link: var(--clr-pri);
+  --clr-button: var(--clr-pri);
+  --nav-size: 4rem;
+  --width-major: 100%;
+  --width-minor: 90%;
 }
-main {
-  margin-bottom: 3em; /* Margin bottom by footer height */
+
+@media (min-width: 768px) {
+  :root {
+    --width-major: 90%;
+    --width-minor: 80%;
+  }
 }
-.footer {
+
+@media (min-width: 992px) {
+  :root {
+    --width-major: 80%;
+    --width-minor: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --width-major: 80%;
+    --width-minor: 70%;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --width-major: 70%;
+    --width-minor: 60%;
+  }
+}
+
+.dark {
+  --clr-nav: white;
+  --clr-content: white;
+  --clr-title: white;
+  --clr-pri: hsl(var(--clr-hue), 90%, 30%);
+  --clr-sec: hsl(var(--clr-hue), 90%, 20%);
+  --clr-ter: hsl(var(--clr-hue), 70%, 20%);
+  --clr-pri-dark: white;
+  /* --clr-pri: hsl(var(--clr-hue), 90%, 15%);
+  --clr-sec: hsl(var(--clr-hue), 90%, 5%);
+  --clr-ter: hsl(var(--clr-hue), 70%, 5%); */
+  --clr-bg: hsl(var(--clr-hue), 5%, 10%);
+  --clr-link: hsl(var(--clr-hue), 90%, 65%);
+  --clr-button: var(--clr-link);
+}
+
+#theme-switch {
+  color: var(--clr-pri-dark);
   position: fixed;
-  bottom: 0;
-  height: 3em;
-  line-height: 3em;
+  bottom: var(--nav-size);
+  left: 0;
+  margin: 1em;
+  text-shadow:
+    0 0 3px var(--clr-bg),
+    1px 1px var(--clr-bg),
+    1px -1px var(--clr-bg),
+    -1px 1px var(--clr-bg),
+    -1px -1px var(--clr-bg);
+  cursor: pointer;
+}
+
+#theme-switch::after {
+  content: " Dark mode";
+  opacity: 0%;
+  transition: all 0.2s linear;
+}
+
+#theme-switch:hover::after {
+  opacity: 100%;
+}
+
+.dark #theme-switch::after {
+  content: " Light mode";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--clr-pri);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: var(--nav-size);
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  width: var(--width-major);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav {
+  font-size: 1em;
+  flex-grow: 1;
+/*   text-transform: uppercase; */
+}
+
+:is(header, footer) ul {
+  display: flex;
+  list-style: none;
   width: 100%;
 }
-.footer * {
-  color: #fff;
+
+nav li:not(:last-child) {
+  margin-right: 1em;
 }
-.footer a:hover {
-  color: #fff;
+
+nav li:last-child {
+  margin-left: auto;
 }
-.footer a:hover {
-  color: #fff;
+
+:is(header, footer) a {
+  text-decoration: none;
+  color: var(--clr-nav);
+  position: relative;
 }
-.footer i.fa {
-  color: #fff;
-  font-size: 2em;
+
+:is(header, footer) a::before {
+  content: '';
+  width: 0%;
+  height: 0.1em;
+  background: var(--clr-nav);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.2s ease-in-out;
 }
-td {
+
+:is(header, footer) a::-moz-focus-inner {
+  border: 0;
+}
+
+:is(header, footer) a:focus {
+  outline: none;
+}
+
+:is(header, footer) a:active::before,
+:is(header, footer) a:focus::before,
+:is(header, footer) a:focus-visible::before,
+:is(header, footer) a:hover::before {
+  width: 100%;
+  left: 0%;
+}
+
+main {
+  margin-top: var(--nav-size);
+  margin-bottom: var(--nav-size);
+  background: var(--clr-bg);
+  display: inline-block;
+}
+
+.card {
+  /*
+    When the contents of the card are around the min height the card-content margin isn't adhered to,
+    the next title ends up displaying before the margin (maybe a bug). flow-root forces the margin to
+    be contained in the card BFC.
+  */
+  display: flow-root;
+  scroll-margin: var(--nav-size);
+  min-height: calc(100vh - var(--nav-size) - var(--nav-size));
+}
+
+.card-content-segment p {
+  padding-left: 10%;
   text-align: justify;
+  text-justify: inter-word;
+  color: var(--clr-content);
+}
+
+.card-content-segment p + * {
+  margin-top: 1em;
+}
+
+.card:nth-child(2n) .card-title {
+  background: var(--clr-ter);
+}
+
+.card:nth-child(2n+1) .card-title {
+  background: var(--clr-sec);
+}
+
+.card-content {
+  margin: 5em auto;
+  width: var(--width-minor);
+}
+
+.card-content a {
+  color: var(--clr-link);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.card-title {
+  font-size: 3em;
+  height: 4em;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: var(--clr-title);
+}
+
+.card-content-segment {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.card-content-segment + * {
+  margin-top: 2em;
+}
+
+.card-content-segment * {
+  color: var(--clr-content);
+}
+
+small {
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.form {
+  color: var(--clr-content)
+}
+
+.form-fields {
+  margin-top: 2em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 4fr;
+  /* gap: 2em; */
+}
+
+.form-label {
+  text-align: left;
+}
+
+.form-group + * {
+  margin-top: 1em;
+}
+
+textarea {
+  resize: vertical;
+  font-family: inherit;
+  padding: 0.25em;
+}
+
+.form-input-large {
+  height: 10em;
+}
+
+.contact-info {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.button {
+  background: none;
+  display: block;
+  color: var(--clr-button);
+  outline: none;
+  border: 0.05em solid var(--clr-button);
+  border-radius: 0.1em;
+  padding: 0.5em 10%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1em;
+  margin: 1em auto;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  /* background: var(--clr-pri);
+  color: var(--clr-nav); */
+  box-shadow: 0 0 0 0.1em var(--clr-pri);
+  font-weight: 400;
+  /* border: 0.1em solid var(--clr-pri); */
+  /* border-width: 0.1em; */
+}
+
+footer {
+  background: var(--clr-pri);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: var(--nav-size);
+  display: flex;
+}
+
+footer ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  width: 100%;
+}
+
+footer li:first-child {
+  justify-self: left;
+}
+
+footer li:last-child {
+  justify-self: right;
+}
+
+footer li {
+  justify-self: center;
+}
+
+footer i {
+  color: var(--clr-nav);
 }
