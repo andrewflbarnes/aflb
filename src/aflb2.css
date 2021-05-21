@@ -178,6 +178,12 @@ main {
 }
 
 .card {
+  /*
+    When the contents of the card are around the min height the card-content margin isn't adhered to,
+    the next title ends up displaying before the margin (maybe a bug). flow-root forces the margin to
+    be contained in the card BFC.
+  */
+  display: flow-root;
   scroll-margin: var(--nav-size);
   min-height: calc(100vh - var(--nav-size) - var(--nav-size));
 }
